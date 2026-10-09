@@ -38,7 +38,7 @@ function getDefaultBiomes(): Biome[] {
     "#fbe79f",
     "#b5b887",
     "#d2d082",
-    "#c8d68f",
+    "#b9d68f", 
     "#b6d95d",
     "#29bc56",
     "#7dcb35",
