@@ -18,19 +18,19 @@ export interface Biome {
 
 function getDefaultBiomes(): Biome[] {
   const name = [
-    "Marine",
-    "Hot desert",
-    "Cold desert",
-    "Savanna",
-    "Grassland",
-    "Tropical seasonal forest",
-    "Temperate deciduous forest",
-    "Tropical rainforest",
-    "Temperate rainforest",
-    "Taiga",
-    "Tundra",
-    "Glacier",
-    "Wetland"
+    "Marine",                       // 0
+    "Hot desert",                   // 1
+    "Cold desert",                  // 2
+    "Savanna",                      // 3
+    "Grassland",                    // 4
+    "Tropical seasonal forest",     // 5
+    "Temperate deciduous forest",   // 6
+    "Tropical rainforest",          // 7
+    "Temperate rainforest",         // 8
+    "Taiga",                        // 9
+    "Tundra",                       // 10
+    "Glacier",                      // 11
+    "Wetland"                       // 12
   ];
 
   const color = [
@@ -214,7 +214,7 @@ class BiomesGenerator {
   private isWetland(moisture: number, temperature: number, height: number) {
     if (temperature <= -2) return false; // too cold
     if (moisture > 40 && height < 25) return true; // near coast
-    if (moisture > 24 && height > 24 && height < 60) return true; // off coast
+    // if (moisture > 24 && height > 24 && height < 60) return true; // off coast      // Lets keep all wetlands near coast
     return false;
   }
 }
